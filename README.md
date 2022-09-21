@@ -19,11 +19,11 @@
     torch-scatter=2.0.5=pypi_0
     torch-sparse=0.6.8=pypi_0
     torchvision=0.8.2=pypi_0
-  ```
- more detail about virtual environment can be found in 
- ```
- requirement.txt
- ```
+    numpy 1.23.0
+    pandas 1.3.0
+    scikit-learn 1.0.2
+    gensim 3.7.2
+    jieba 0.39
  # Run
  Train and test
  ```
