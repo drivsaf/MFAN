@@ -24,6 +24,7 @@
     scikit-learn 1.0.2
     gensim 3.7.2
     jieba 0.39
+ ```
  # Run
  Train and test
  ```
