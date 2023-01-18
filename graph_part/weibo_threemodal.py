@@ -132,11 +132,11 @@ class GraphAttentionLayer(nn.Module):
     def __repr__(self):
         return self.__class__.__name__ + ' (' + str(self.in_features) + ' -> ' + str(self.out_features) + ')'
 
-class real_GAT(nn.Module):
+class Signed_GAT(nn.Module):
     def __init__(self,node_embedding,cosmatrix,nfeat, uV, original_adj, hidden = 16, \
                                             nb_heads = 4, n_output = 300, dropout = 0, alpha = 0.3):
 
-        super(real_GAT, self).__init__()
+        super(Signed_GAT, self).__init__()
         self.dropout = dropout
         self.uV = uV
         embedding_dim = 300
@@ -407,7 +407,7 @@ class MFAN(NeuralNetwork):
         self.word_embedding = nn.Embedding(num_embeddings=V, embedding_dim=D, padding_idx=0,
                                            _weight=torch.from_numpy(embedding_weights))
         self.cosmatrix = self.calculate_cos_matrix()
-        self.gat_relation = real_GAT(node_embedding=config['node_embedding'], cosmatrix = self.cosmatrix,nfeat=300, \
+        self.gat_relation = Signed_GAT(node_embedding=config['node_embedding'], cosmatrix = self.cosmatrix,nfeat=300, \
                                       uV=self.uV, nb_heads=1,
                                       original_adj=original_adj, dropout=0)
 
