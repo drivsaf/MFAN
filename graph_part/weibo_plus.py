@@ -27,7 +27,7 @@ import random
 from time import *
 from PIL import Image
 import sys
-sys.path.append('/home/zhengjiaqi2021/zhengjiaqi2021/Text_Graph_RumorDetection/image_part')
+sys.path.append('/home/../image_part')
 from resnet import ResNet50
 from torch_geometric.nn import MessagePassing
 from torch_geometric.utils import add_self_loops,degree
